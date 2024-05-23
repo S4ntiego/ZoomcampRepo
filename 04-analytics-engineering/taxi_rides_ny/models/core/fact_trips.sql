@@ -1,3 +1,4 @@
+--CI test
 {{
     config(
         materialized='table'
