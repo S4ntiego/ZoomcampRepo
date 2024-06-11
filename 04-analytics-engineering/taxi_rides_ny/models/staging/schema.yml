@@ -2,10 +2,10 @@ version: 2
 
 sources:
   - name: staging
-    database: ny-rides-adam
+    database: terraform-demo-adam
      # For postgres:
       #database: production
-    schema: ny_taxi
+    schema: trips_data_all
 
       # loaded_at_field: record_loaded_at
     tables:
