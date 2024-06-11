@@ -5,7 +5,7 @@ sources:
     database: terraform-demo-adam
      # For postgres:
       #database: production
-    schema: trips_data_all
+    schema: dbt_aksiazek
 
       # loaded_at_field: record_loaded_at
     tables:
