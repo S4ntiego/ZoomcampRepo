@@ -2,15 +2,15 @@ version: 2
 
 sources:
   - name: staging
-    database: ny-rides-adam
+    database: terraform-demo-adam
      # For postgres:
       #database: production
-    schema: ny_taxi
+    schema: dbt_aksiazek
 
       # loaded_at_field: record_loaded_at
     tables:
-      - name: green_taxi
-      - name: yellow_taxi
+      - name: green_tripdata
+      - name: yellow_tripdata
          # freshness:
            # error_after: {count: 6, period: hour}
 
@@ -79,11 +79,6 @@ models:
           - name: Payment_type 
             description: >
               A numeric code signifying how the passenger paid for the trip.
-            tests: 
-              - accepted_values:
-                  values: "{{ var('payment_type_values') }}"
-                  severity: warn
-                  quote: false
           - name: payment_type_description
             description: Description of the payment_type code
           - name: Fare_amount 
@@ -171,11 +166,6 @@ models:
           - name: Payment_type 
             description: >
               A numeric code signifying how the passenger paid for the trip.
-            tests: 
-              - accepted_values:
-                  values: "{{ var('payment_type_values') }}"
-                  severity: warn
-                  quote: false
           - name: payment_type_description
             description: Description of the payment_type code
           - name: Fare_amount 
